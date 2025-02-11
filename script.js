@@ -8,9 +8,7 @@ class Persion{
     get name(){
         return this._name;
     }
-    /**
-     * @param {Integer} p_age
-     */
+    
     set age(p_age){
         this._age = p_age
     }
@@ -26,7 +24,21 @@ class Teacher extends Persion{
         console.log(`${this._name} is teaching`);
     }
 }
+// testing
+// Creating a Person instance
+const person = new Person("John", 25);
+console.log(person._name);  // Output: John
 
+person._age = 30;  // Using the setter to change the age
+console.log(person._age);  // Output: 30
+
+// Creating a Student instance
+const student = new Student("Alice", 22);
+student.study();  // Output: Alice is studying
+
+// Creating a Teacher instance
+const teacher = new Teacher("Bob", 40);
+teacher.teach();  // Output: Bob is teaching
 
 // Do not change the code below this line
 window.Person = Person;
